@@ -1,28 +1,26 @@
 import { Route, Routes } from "react-router-dom"
-import Home from './Pages/Home'
-import About from './Pages/About'
-import Asanas from './Pages/Asanas'
-import Navbar from "./Components/Navbar";
+import Login from "./Pages/Login"
+import ForgotPassword from "./Pages/ForgotPassword"
+import Footer from "./ Layouts/Footer"
+import Navbar from "./ Layouts/Navbar"
+// import Home from "./Pages/Home"
+import About from "./Pages/About"
 
-
-import Footer from "./Components/Footer"
-import Signup from "./Components/Login";
 
 const App = () => {
   return (
   <>
-  <Navbar />
+  <Navbar/>
 
   <Routes>
-    <Route path="/" element={<Home />} />
-    <Route path="/about" element={<About />} />
-    <Route path="/asanas" element={<Asanas />} />
-    <Route path="/login" element={<Signup />} />
+    {/* <Route path="/" element={<Home/>}  /> */}
+     <Route path="/about" element={<About/>}  />
+    <Route path="/forgot-password" element={<ForgotPassword/>} />
+     <Route path="/login" element={<Login />} />
   </Routes>
 
-  <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
+ 
     <Footer />
-  </div>
 </>
 
   )
